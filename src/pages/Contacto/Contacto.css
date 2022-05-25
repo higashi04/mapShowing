@@ -1,0 +1,5 @@
+.contact-title, .contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

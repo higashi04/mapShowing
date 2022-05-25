@@ -1,7 +1,20 @@
+:root {
+  --main-color: #4382b7;
+  --main-color2: #669bc7;
+  --secondary-color: #090b34;
+  --third-color: #101018;
+  --fourthly-color: #4d4d4d;
+}
+
 body {
-  padding-top: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   height: 100vh;
-  background-image: url('../src/assets/277818637_128486116428810_4633483802542049870_n.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.notHome {
+  height: 100vh;
+  background-color: var(--main-color2);
 }

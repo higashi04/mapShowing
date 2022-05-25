@@ -1,29 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { GrBus, GrInstagram } from "react-icons/gr";
 import { BsFacebook } from "react-icons/bs";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Navibar = () => {
+  const [scroll, setScroll] = useState(false);
+  const changeNavbarColor = () =>{
+    if(window.scrollY >= 80){
+      setScroll(true);
+    }
+    else{
+      setScroll(false);
+    }
+ };
+ window.addEventListener('scroll', changeNavbarColor);
   return (
     <>
-      <Navbar expand="lg" fixed="top" className="navib">
+      <Navbar expand="lg" fixed="top" className={scroll ? "navib navbar-light bg-light" : "navib navbar-light"} >
         <Container>
-          <Navbar.Brand href="#home">
-            <GrBus />
+          <Navbar.Brand>
+            <Link to="/">
+              {" "}
+              <GrBus />{" "}
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Contacto</Nav.Link>
-              <Nav.Link href="#link">Quiénes Somos</Nav.Link>
-              <Nav.Link href="https://www.facebook.com/TranspoVillareal2022"><BsFacebook /></Nav.Link>
-              <Nav.Link href="#"><GrInstagram /></Nav.Link>
+              <Nav.Link href="contacto">Contacto</Nav.Link>
+              <Nav.Link href="about">Quiénes Somos</Nav.Link>
+              <Nav.Link href="https://www.facebook.com/TranspoVillareal2022">
+                <BsFacebook />
+              </Nav.Link>
+              <Nav.Link href="#">
+                <GrInstagram />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Outlet/>
+      <Outlet />
     </>
   );
 };
