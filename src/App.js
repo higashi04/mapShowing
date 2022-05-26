@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import Body from "./pages/Body/Body";
 import Contacto from "./pages/Contacto/Contacto";
 import About from "./pages/About/About";
+import Vacancies from "./pages/Vacancies/Vacancies";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Body />} />
           <Route path='contacto' element={<Contacto/>}/>
           <Route path='about' element={<About/>}/>
+          <Route path='vacantes' element={<Vacancies/>}/>
         </Route>
       </Routes>
       <Footer/>

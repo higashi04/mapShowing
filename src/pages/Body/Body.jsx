@@ -10,11 +10,11 @@ const Body = () => {
   
   return (
     <div className="links">
-      <Link className="btn anchorBtn mx-3" to="contacto">
+      <Link className="btn anchorBtn mx-3" to="contacto" reloadDocument>
         {" "}
         Contacto{" "}
       </Link>
-      <Link className="btn anchorBtn mx-3" to="about">
+      <Link className="btn anchorBtn mx-3" to="about" reloadDocument>
         {" "}
         Quiénes Somos{" "}
       </Link>

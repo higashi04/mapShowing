@@ -30,6 +30,7 @@ const Navibar = () => {
             <Nav className="me-auto">
               <Nav.Link href="contacto">Contacto</Nav.Link>
               <Nav.Link href="about">Quiénes Somos</Nav.Link>
+              <Nav.Link href="vacantes">Vacantes</Nav.Link>
               <Nav.Link href="https://www.facebook.com/TranspoVillareal2022">
                 <BsFacebook />
               </Nav.Link>

@@ -3,3 +3,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.contact-input {
+    width: 500px;
+    height: auto;
+}
+
+#floatingComments {
+    height: 426px;
+}
