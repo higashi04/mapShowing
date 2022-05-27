@@ -12,3 +12,9 @@
 #floatingComments {
     height: 426px;
 }
+
+@media (max-device-width: 400px) {
+    .contact-input{
+        width: 290px;
+    }
+}
