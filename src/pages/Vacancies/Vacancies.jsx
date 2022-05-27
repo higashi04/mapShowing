@@ -46,6 +46,7 @@ const Vacancies = () => {
       ) : (
         <Spinner animation="border" />
       )}
+      <h4 className="vacancy-h1">Para aplicar a cualquiera de nuestras vacantes, favor de usar la forma de contacto.</h4>
     </>
   );
 };
