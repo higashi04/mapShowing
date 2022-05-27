@@ -1,0 +1,37 @@
+.service-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+.service-text{
+   font-size: 1.5rem; 
+}
+.service-main{
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-img{
+    width: 750px;
+    height: auto;
+}
+
+@media (max-device-width: 400px) {
+    .service-main{
+        font-size: 1rem;
+        margin: 5px;
+    }
+    .service-text{
+        font-size: 0.85rem;
+    }
+    .service-img{
+        width: 350px;
+        height: auto;
+    }
+}

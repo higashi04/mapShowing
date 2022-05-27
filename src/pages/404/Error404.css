@@ -1,0 +1,26 @@
+.error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-box{
+    border: 3px solid #9d0208;
+    background-color: #ff595e;
+    width: 350px;
+    height: auto;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin-top: 200px;
+}
+
+.error-head{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.error-text{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-right: 30px;
+}

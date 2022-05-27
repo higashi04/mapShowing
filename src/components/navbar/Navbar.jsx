@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { GrBus, GrInstagram } from "react-icons/gr";
+import { GrBus, 
+  // GrInstagram
+ } from "react-icons/gr";
 import { BsFacebook } from "react-icons/bs";
 import { Link, Outlet } from "react-router-dom";
 
@@ -31,12 +33,14 @@ const Navibar = () => {
               <Nav.Link href="contacto">Contacto</Nav.Link>
               <Nav.Link href="about">Quiénes Somos</Nav.Link>
               <Nav.Link href="vacantes">Vacantes</Nav.Link>
+              <Nav.Link href="servicio">Servicio</Nav.Link>
+              <Nav.Link href="seguridad">Seguridad</Nav.Link>
               <Nav.Link href="https://www.facebook.com/TranspoVillareal2022">
-                <BsFacebook />
+                <BsFacebook /> TranspoVillareal2022
               </Nav.Link>
-              <Nav.Link href="#">
+              {/* <Nav.Link href="#">
                 <GrInstagram />
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

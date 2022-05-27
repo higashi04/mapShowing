@@ -1,0 +1,33 @@
+.safety-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.safety-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.safety-main-paragraph{
+    border: 2px solid #096177;
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 15px;
+    width: 250px;
+}
+.safety-h2{
+    margin: 5px;
+    padding-left: 50px;
+}
+.safety-p{
+    border: 2px solid #096177;
+    margin: 10px;
+    font-size: .9rem;
+    background-color: aliceblue;
+    width: fit-content;
+    height: 250px;
+    padding: 9px;
+    margin-bottom: 20px;
+}

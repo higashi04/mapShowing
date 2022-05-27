@@ -12,7 +12,7 @@ const About = () => {
     "Ser un operador de transporte de personal reconocido por un excelente servicio de calidad y con innovación; expertos que proveen soluciones a sus clientes, respetando al medio ambiente.";
   const qaPol =
     "Transporte Villarreal se compromete en satisfacer y superar las expectativas de sus clientes, otorgando un servicio integral basado en la calidad, con la mentalidad fija hacia la mejora continua.";
-
+  const us = 'Somos una empresa dedicada al transporte de personal. Tenemos más de 25 años de experiencia en la ciudad de Nuevo Laredo, llevando lo más importante para tu empresa… ¡Tus colaboradores!'
   useEffect(() => {
     document.body.style.backgroundColor = "#669BC7";
   });
@@ -20,6 +20,7 @@ const About = () => {
   return (
     <div className="py-5">
       <h1 className="aboutH1">Quiénes Somos</h1>
+      <TextContainer title="Nosotros" text={us}/>
       <TextContainer title="MISIÓN" text={mission} />
       <TextContainer title="VISIÓN" text={vision} />
       <TextContainer
