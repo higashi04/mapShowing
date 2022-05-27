@@ -98,7 +98,9 @@ const Contacto = () => {
               Comentarios:{" "}
             </label>
           </div>
-          <button className="btn btn-success mt-3">Mandar</button>
+          <div className="mb-5">
+          <button className="btn btn-success mt-3 mb-3">Mandar</button>
+          </div>
         </form>
       </div>
     </>
