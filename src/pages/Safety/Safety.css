@@ -31,3 +31,14 @@
     padding: 9px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 700px) {
+    .safety-p{
+        height: 400px;
+        font-size: .8rem;
+    }
+    .fifth-p{
+        width: 107.27px;
+        margin-bottom: 80px;
+    }
+}

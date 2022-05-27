@@ -14,9 +14,7 @@ const Safety = () => {
           comprometidos a administrar nuestras operaciones de servicio y salud
           ocupacional de todo el personal, clientes y visitantes.
         </p>
-        <p>
-          <h2 className="safety-h2">Por ello establecemos lo siguiente:</h2>
-        </p>
+        <h2 className="safety-h2">Por ello establecemos lo siguiente:</h2>
       </main>
       <section>
         <div className="container mb-5">
@@ -50,7 +48,7 @@ const Safety = () => {
               </p>
             </div>
             <div className="col-4">
-              <p className="safety-p">
+              <p className="safety-p fifth-p">
                 Se realizaran auditorias internas y externas necesarias para el
                 monitoreo del desempeño de seguridad y así promover la mejora
                 continua en los procesos de detención, eliminación y control de
