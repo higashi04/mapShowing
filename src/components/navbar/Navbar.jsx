@@ -42,6 +42,7 @@ const Navibar = () => {
                 <GrInstagram />
               </Nav.Link> */}
             </Nav>
+            <Nav.Link className="btn btn-success" href="login" hidden>Iniciar Sesión</Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>
