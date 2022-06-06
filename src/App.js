@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 //components
@@ -17,6 +17,8 @@ import Login from "./pages/Login/Login";
 
 function App() {
   return (
+    <BrowserRouter>
+    <>
     <div>
       <Routes>
         <Route path="/" element={<Navibar />}>
@@ -32,6 +34,8 @@ function App() {
       </Routes>
       <Footer/>
     </div>
+    </>
+    </BrowserRouter>
   );
 }
 
