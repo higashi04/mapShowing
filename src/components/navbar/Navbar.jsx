@@ -31,7 +31,6 @@ const Navibar = () => {
     localStorage.removeItem('user')
     navigate("/");
   };
-console.log(localStorage)
   return (
     <>
       <Navbar
@@ -62,9 +61,11 @@ console.log(localStorage)
               {/* <Nav.Link href="#">
                 <GrInstagram />
               </Nav.Link> */}
+              {user && <Nav.Link href="choferes" >Choferes</Nav.Link>}
             </Nav>
             {user ? (
               <>
+              <Link to='perfil' className="btn btn-dark me-2" reloadDocument> <FaUser/> {user.username}</Link>
                 <button className="btn btn-dark" onClick={onLogout}>
                   <FaSignOutAlt /> Cerrar Sesión
                 </button>

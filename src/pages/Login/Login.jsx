@@ -84,7 +84,6 @@ const Login = () => {
             <button className="btn btn-success"> <FaSignInAlt className="me-3" />Iniciar Sesión</button>
           </form>
         </div>
-        {email} {password}
       </section>
     </>
   );

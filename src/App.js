@@ -15,7 +15,8 @@ import Servicio from "./pages/Branches/Servicio";
 import Safety from "./pages/Safety/Safety";
 import Error404 from "./pages/404/Error404";
 import Login from "./pages/Login/Login";
-import Register from "./pages/register/Register";
+import Profile from "./pages/ProfilePage/Profile";
+import Drivers from "./pages/Drivers/Drivers";
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
               <Route path="servicio" element={<Servicio />} />
               <Route path="seguridad" element={<Safety />} />
               <Route path="login" element={<Login />} />
-              <Route path="register" element={<Register/>}/>
+              <Route path="perfil" element={<Profile/>} />
+              <Route path="choferes" element={<Drivers/>} />
               <Route path="*" element={<Error404 />} />
             </Route>
           </Routes>
