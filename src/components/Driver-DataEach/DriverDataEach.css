@@ -1,0 +1,15 @@
+.driverPhoto {
+    width: 65%;
+    height: auto;
+    border-radius: 50px;
+}
+.driverData {
+    font-size: 1.25rem;
+}
+.driverDataRow{
+    background-color: azure;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
