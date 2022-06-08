@@ -5,3 +5,11 @@
     padding: 25px;
     margin: 50px 0;
 }
+.driver-container-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-custom{
+    width: 150px;
+}
