@@ -1,9 +1,10 @@
 .driver-container{
-    border: 5px solid black;
+    border: 2px solid black;
     font-size: 1.25rem;
     border-radius: 15px;
     padding: 25px;
     margin: 50px 0;
+    background-color: azure;
 }
 .driver-container-row{
     display: flex;

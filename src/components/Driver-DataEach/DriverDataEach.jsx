@@ -1,23 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./DriverDataEach.css";
+
 export default function DriverDataEach({ driver }) {
-  const [isLoading, setLoading] = useState(false);
-
-  const imgUrl = async () => {
-    let url = await driver.photo.url;
-    setLoading(!isLoading);
-    return url;
-  };
-
   return (
     <div className="container driverData">
       <div className="row my-3 driverDataRow">
-        <h1> {driver.name}</h1>
-      </div>
-      <div className="row">
-        {isLoading && (
-          <img className="driverPhoto" src={imgUrl()} alt={driver.name} />
-        )}
+        <h1 className="offset-md-4"> {driver.name}</h1>
       </div>
       <div className="row my-3 driverDataRow">
         <div className="col-6">Teléfono</div>
@@ -36,6 +24,11 @@ export default function DriverDataEach({ driver }) {
         <div className="col-6">{driver.imss}</div>
       </div>
       <div className="row my-3 driverDataRow"></div>
+      <hr />
+      <div className="row my-3 driverDataRow">
+        {/* <div className="col-6">Unidad</div> */}
+        {/* <div className="col-6"> {driver.bus.unidad} </div> */}
+      </div>
     </div>
   );
 }

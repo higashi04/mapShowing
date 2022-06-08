@@ -61,7 +61,7 @@ const Navibar = () => {
               {/* <Nav.Link href="#">
                 <GrInstagram />
               </Nav.Link> */}
-              {user && <Nav.Link href="choferes" >Choferes</Nav.Link>}
+              {user && <Nav.Link href="/choferes" >Choferes</Nav.Link>}
             </Nav>
             {user ? (
               <>
