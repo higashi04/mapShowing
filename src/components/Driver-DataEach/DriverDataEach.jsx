@@ -3,7 +3,7 @@ import "./DriverDataEach.css";
 
 export default function DriverDataEach({ driver }) {
   return (
-    <div className="container driverData pb-5">
+    <div className="container driverData">
       <div className="row my-3">
         <img
           className="img-fluid driverPhoto"

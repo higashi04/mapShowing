@@ -18,6 +18,7 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/ProfilePage/Profile";
 import Drivers from "./pages/Drivers/Drivers";
 import DriverPage from "./pages/DriverPage/DriverPage";
+import BusRoute from "./pages/BusRoute/BusRoute";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
               <Route path="perfil" element={<Profile/>} />
               <Route path="choferes" element={<Drivers/>} />
               <Route path="choferes/:id" element={<DriverPage/>} />
+              <Route path="choferes/:id/gps" element={<BusRoute/>} />
               <Route path="*" element={<Error404 />} />
             </Route>
           </Routes>
