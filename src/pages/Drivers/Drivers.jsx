@@ -31,6 +31,10 @@ const Drivers = () => {
           url =
             "https://transportes-villarreal.herokuapp.com/drivers/getDrivers/aistermi";
           break;
+        case "ezo":
+          url =
+            "https://transportes-villarreal.herokuapp.com/drivers/getDrivers/ezo";
+          break;
         default:
           url = "https://transportes-villarreal.herokuapp.com/drivers/getDrivers";
           break;
