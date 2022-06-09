@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import DriverDataEach from "../../components/Driver-DataEach/DriverDataEach";
+import Spinner from "../../components/Spinner/Spinner";
 
 export default function DriverPage() {
     const [data, setData] = useState("");
+    const [isLoading, setLoading] = useState(false)
     const {id} = useParams()
     useEffect(() => {
         document.body.style.backgroundColor = "#669BC7";
       });
       const getDriver = () => {
+        setLoading(true)
         const url = `https://transportes-villarreal.herokuapp.com/drivers/getDrivers/${id}`
         try {
             const options = { method: "GET", url: url };
@@ -21,6 +24,8 @@ export default function DriverPage() {
               });
           } catch (e) {
             console.error(e);
+          } finally {
+            setLoading(false)
           }
     }
     useEffect(() => {
@@ -28,8 +33,7 @@ export default function DriverPage() {
     })
   return (
   <div className="container my-5">
-    {/* <img className="img-fluid driverPhoto"  src={data.photo.url} alt={data.photo.filename} /> */}
-      <DriverDataEach driver={data} />
-      {/* <div>{data.bus.unidad}</div> */}
-  </div>);
+    {isLoading ? <Spinner/> : <DriverDataEach driver={data} />} 
+  </div>
+  );
 }

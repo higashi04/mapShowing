@@ -3,7 +3,8 @@ import "./DriverDataEach.css";
 
 export default function DriverDataEach({ driver }) {
   return (
-    <div className="container driverData">
+    <div className="container driverData pb-5">
+      <img className="img-fluid driverPhoto" src={driver.photo?.url} alt={driver.name} />
       <div className="row my-3 driverDataRow">
         <h1 className="offset-md-4"> {driver.name}</h1>
       </div>
@@ -26,8 +27,8 @@ export default function DriverDataEach({ driver }) {
       <div className="row my-3 driverDataRow"></div>
       <hr />
       <div className="row my-3 driverDataRow">
-        {/* <div className="col-6">Unidad</div> */}
-        {/* <div className="col-6"> {driver.bus.unidad} </div> */}
+        <div className="col-6">Unidad</div>
+        <div className="col-6"> {driver.bus?.unidad} </div>
       </div>
     </div>
   );
