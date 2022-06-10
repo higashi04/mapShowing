@@ -3,3 +3,9 @@
     height: 70vh;
     border: 2px solid red;
   }
+@media (max-device-width: 500px){
+  #map {
+    width: 80vw;
+    border: 5px solid red;
+  }
+}

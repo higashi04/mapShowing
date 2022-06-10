@@ -3,13 +3,22 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
+import Spinner from '../../components/Spinner/Spinner'
 
 import DriverBox from "../../components/Driver-box/Driver-Box";
 
 const Drivers = () => {
   const { user } = useSelector((state) => state.auth);
   const [data, setData] = useState([]);
+  const [company, setCompany] = useState("");
+  const [isLoading, setLoading] = useState(false)
   const navigate = useNavigate();
+
+  const correctCapitalize = (str) => {
+    const string = str.toLowerCase();
+    const stringTwo = string.charAt(0).toUpperCase() + string.slice(1);
+    return stringTwo;
+  };
 
   useEffect(() => {
     document.body.style.backgroundColor = "#669BC7";
@@ -21,6 +30,8 @@ const Drivers = () => {
     } else {
       const getDrivers = () => {
         let url;
+        setLoading(true)
+        setCompany(correctCapitalize(user.company))
         switch (user.company.toLowerCase()) {
           case "medline":
             url =
@@ -57,6 +68,8 @@ const Drivers = () => {
             });
         } catch (e) {
           console.error(e);
+        } finally {
+          setLoading(false)
         }
       };
       getDrivers();
@@ -65,9 +78,9 @@ const Drivers = () => {
 
   return (
     <main className="pb-5">
-      <h1 className="offset-md-5">Choferes</h1>
+      <h1 className="mx-3">Choferes de {company}</h1>
 
-      {data.map((item) => (
+      { isLoading ? <Spinner/> : data.map((item) => (
         <DriverBox key={item._id} name={item.name} id={item._id} />
       ))}
     </main>

@@ -6,9 +6,16 @@ import "./Profile.css";
 
 export default function Profile() {
   const [userData, setUserData] = useState("");
+  const [company, setCompany] = useState("");
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate()
+  const correctCapitalize = (str) => {
+    const string = str.toLowerCase();
+    const stringTwo = string.charAt(0).toUpperCase() + string.slice(1);
+    return stringTwo;
+  };
   useEffect(() => {
+    setCompany(correctCapitalize(user.company))
     document.body.style.backgroundColor = "#669BC7";
     if( user === null) {
       navigate("/login")
@@ -29,7 +36,7 @@ export default function Profile() {
       </div>
       <div className="row my-3">
         <div className="col-6">Empresa</div>
-        <div className="col-6">{userData.company}</div>
+        <div className="col-6">{company}</div>
       </div>
       <div className="row my-3">
         <div className="col-12 profile-notice">

@@ -1,23 +1,52 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Popup } from "react-leaflet";
+import MapPointer from '../../assets/geo-alt-fill.svg'
+import { Marker } from "react-leaflet";
+import { Icon } from "leaflet";
+import { useSelector } from "react-redux";
 import "leaflet/dist/leaflet.css";
 
-const MapView = () => {
+const icon = new Icon({
+  iconUrl: MapPointer,
+  iconSize: [25, 25]
+})
 
+const MapView = () => {
+  const { user } = useSelector((state) => state.auth);
+  let center;
+  switch (user.company.toLowerCase()) {
+    case "medline":
+      center = [27.475168207475267, -99.62792571125931]
+      break;
+    case "oes":
+      center = [27.465827083348838, -99.53910737807658]
+      break;
+    case "ezo":
+      center = [27.471544089968063, -99.63054142406126]
+      break;
+    case "aistermi":
+      center = [27.457094014565904, -99.51961640402288]
+      break;
+    case "bpi":
+      center = [27.443426294145464, -99.50281284374663]
+      break;
+    default:
+      break;
+  }
   return (
     <MapContainer
-      center={[27.47629, -99.51639]}
+      center={center}
       zoom={14}
       scrollWheelZoom={false}
-      style={{ height: "70vh", width: "50vw" }}
+      style={{ height: "80vh", width: "80vw" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[27.57629, -99.91639]}>
+      <Marker position={center} icon={icon}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+        {user.company}
         </Popup>
       </Marker>
     </MapContainer>

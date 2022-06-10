@@ -3,7 +3,7 @@
     font-size: 1.25rem;
     border-radius: 15px;
     padding: 25px;
-    margin: 50px 0;
+    margin: 50px;
     background-color: azure;
 }
 .driver-container-row{
@@ -13,4 +13,15 @@
 }
 .btn-custom{
     width: 150px;
+}
+
+
+@media (max-device-width: 500px) {
+    .driver-container{
+        width: 200px;
+        font-size: 1rem;
+    }
+    .driver-col{
+        margin: 0 5px;
+    }
 }
