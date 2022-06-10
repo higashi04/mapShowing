@@ -34,10 +34,10 @@ function App() {
               <Route path="servicio" element={<Servicio />} />
               <Route path="seguridad" element={<Safety />} />
               <Route path="login" element={<Login />} />
-              <Route path="perfil" element={<Profile/>} />
-              <Route path="choferes" element={<Drivers/>} />
-              <Route path="choferes/:id" element={<DriverPage/>} />
-              <Route path="choferes/:id/gps" element={<BusRoute/>} />
+              <Route path="perfil" element={<Profile />} />
+              <Route path="choferes" element={<Drivers />} />
+              <Route path="choferes/:id" element={<DriverPage />} />
+              <Route path="choferes/:id/ruta" element={<BusRoute />} />
               <Route path="*" element={<Error404 />} />
             </Route>
           </Routes>
