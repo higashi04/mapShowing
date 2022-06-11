@@ -11,3 +11,8 @@
     align-items: center;
     justify-content: center;
 }
+@media (max-device-width: 290px) {
+    .driverData {
+        font-size: 1.10rem;
+    }
+}

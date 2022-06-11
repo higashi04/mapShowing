@@ -32,14 +32,14 @@ export default function DriverPage() {
     getDriver();
   });
   return (
-    <div className="container my-5 pb-5">
+    <div className="container my-5 pb-5 dataBox">
       {isLoading ? (
         <Spinner />
       ) : (
         <>
           {" "}
           <DriverDataEach driver={data} />
-          <Link to={`/choferes/${id}/gps`} className="btn btn-info mb-5" hidden>GPS</Link>
+          <Link to={`/choferes/${id}/ruta`} className="btn btn-info mb-5">Ruta</Link>
         </>
       )}
     </div>

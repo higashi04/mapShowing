@@ -49,6 +49,11 @@ const MapView = () => {
         {user.company}
         </Popup>
       </Marker>
+      <Marker position={[27.54760752232738, -99.56012727590763]} icon={icon}>
+        <Popup>
+          Transporte Villarreal
+        </Popup>
+      </Marker>
     </MapContainer>
   );
 };
