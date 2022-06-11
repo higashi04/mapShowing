@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import DriverDataEach from "../../components/Driver-DataEach/DriverDataEach";
 import Spinner from "../../components/Spinner/Spinner";
@@ -39,7 +39,6 @@ export default function DriverPage() {
         <>
           {" "}
           <DriverDataEach driver={data} />
-          <Link to={`/choferes/${id}/ruta`} className="btn btn-info mb-5">Ruta</Link>
         </>
       )}
     </div>

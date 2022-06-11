@@ -38,7 +38,7 @@ const MapView = () => {
       center={center}
       zoom={14}
       scrollWheelZoom={false}
-      style={{ height: "80vh", width: "80vw" }}
+      style={{ height: "80vh", width: "98vw" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

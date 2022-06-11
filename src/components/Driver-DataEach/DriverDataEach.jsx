@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./DriverDataEach.css";
 
 export default function DriverDataEach({ driver }) {
@@ -35,6 +36,9 @@ export default function DriverDataEach({ driver }) {
       <div className="row my-3 driverDataRow">
         <div className="col-6">Unidad</div>
         <div className="col-6"> {driver.bus?.unidad} </div>
+      </div>
+      <div className="row my-3">
+      <Link to={`/ruta/${driver.bus?._id}`} className="btn btn-info mb-5">Ruta</Link>
       </div>
     </div>
   );

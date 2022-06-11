@@ -37,7 +37,7 @@ function App() {
               <Route path="perfil" element={<Profile />} />
               <Route path="choferes" element={<Drivers />} />
               <Route path="choferes/:id" element={<DriverPage />} />
-              <Route path="choferes/:id/ruta" element={<BusRoute />} />
+              <Route path="ruta/:id" element={<BusRoute />} />
               <Route path="*" element={<Error404 />} />
             </Route>
           </Routes>
