@@ -1,6 +1,7 @@
 .driver-container{
     border: 2px solid black;
     font-size: 1.25rem;
+    font-weight: 500;
     border-radius: 15px;
     padding: 25px;
     margin: 50px;

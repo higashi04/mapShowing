@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import Spinner from '../../components/Spinner/Spinner'
+import './Drivers.css'
 
 import DriverBox from "../../components/Driver-box/Driver-Box";
 
@@ -77,12 +78,14 @@ const Drivers = () => {
   }, [user, navigate]);
 
   return (
-    <main className="pb-5">
-      <h1 className="mx-3">Choferes de {company}</h1>
+    <main className="pb-5 data-box">
+      <div className="dataBox">
+      <h1>Choferes de {company}</h1>
 
-      { isLoading ? <Spinner/> : data.map((item) => (
-        <DriverBox key={item._id} name={item.name} id={item._id} />
-      ))}
+{ isLoading ? <Spinner/> : data.map((item) => (
+  <DriverBox key={item._id} name={item.name} id={item._id} />
+))}
+      </div>
     </main>
   );
 };
