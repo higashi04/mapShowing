@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const {user, isLoading, isError, isSuccess ,message} = useSelector((state) => state.auth)
+  const {user, isError, isSuccess ,message} = useSelector((state) => state.auth)
 
   useEffect(() => {
     document.body.style.backgroundColor = "#669BC7";

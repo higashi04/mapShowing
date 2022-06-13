@@ -36,7 +36,7 @@ export default function Profile() {
       </div>
       <div className="row my-3">
         <div className="col-6">Empresa</div>
-        <div className="col-6">{company}</div>
+        <div className="col-6">{company.length === 3 ? company.toUpperCase() : company}</div>
       </div>
       <div className="row my-3">
         <div className="col-12 profile-notice">

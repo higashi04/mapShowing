@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
 .contact-input {
@@ -12,9 +13,24 @@
 #floatingComments {
     height: 426px;
 }
-
+.phoneBox{
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: azure;
+    margin-bottom: 200px;
+    padding: 5px;
+    text-align: center;
+}
 @media only screen and (max-device-width: 500px) {
     .contact-input{
         width: 290px;
+    }
+    .contact-box{
+        flex-direction: column;
+    }
+    .phoneBox{
+        width: 290px;
+        margin-right: 50px;
     }
 }

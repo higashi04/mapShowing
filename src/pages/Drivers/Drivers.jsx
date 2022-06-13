@@ -80,7 +80,7 @@ const Drivers = () => {
   return (
     <main className="pb-5 data-box">
       <div className="dataBox">
-      <h1>Choferes de {company}</h1>
+      <h1>Choferes de {company.length === 3 ? company.toUpperCase() : company}</h1>
 
 { isLoading ? <Spinner/> : data.map((item) => (
   <DriverBox key={item._id} name={item.name} id={item._id} />

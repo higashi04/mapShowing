@@ -10,6 +10,9 @@ const icon = new Icon({
   iconUrl: MapPointer,
   iconSize: [25, 25]
 })
+const coordinates = {
+  tvilla: [27.54760752232738, -99.56012727590763],
+}
 
 const MapView = () => {
   const { user } = useSelector((state) => state.auth);
@@ -49,7 +52,7 @@ const MapView = () => {
         {user.company}
         </Popup>
       </Marker>
-      <Marker position={[27.54760752232738, -99.56012727590763]} icon={icon}>
+      <Marker position={coordinates.tvilla} icon={icon}>
         <Popup>
           Transporte Villarreal
         </Popup>
