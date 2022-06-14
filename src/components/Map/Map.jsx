@@ -30,9 +30,9 @@ const GMap = () => {
       center = { lat: 27.54452614482854, lng: -99.56006791236273 };
       break;
   }
-  const route = [
-    {lat: 27.471744756667643, long: -99.49815581753424}
-  ]
+  // const route = [
+  //   {lat: 27.471744756667643, lng: -99.49815581753424}, center
+  // ]
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.REACT_APP_MAP_KEY,
@@ -61,7 +61,8 @@ const GMap = () => {
         onUnmount={onUnmount}
       >
         <Marker position={center}  map={map}/>
-        {route.map(item => <Marker  position={item} map={map}/>)}
+         {/* <Marker position={route[0]} map={map} /> */}
+        {/* {route.map(item => <Marker  position={item} map={map}/>)} */}
       </GoogleMap>
     )
   );
