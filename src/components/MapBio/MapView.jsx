@@ -1,10 +1,11 @@
-import React from "react";
-import { MapContainer, TileLayer, Popup } from "react-leaflet";
+import React, {useState} from "react";
+import { MapContainer, TileLayer, Popup, LayersControl } from "react-leaflet";
 import MapPointer from '../../assets/geo-alt-fill.svg'
 import { Marker } from "react-leaflet";
 import { Icon } from "leaflet";
 import { useSelector } from "react-redux";
 import "leaflet/dist/leaflet.css";
+import RoutingMachine from '../RoutingMachine/RoutingMachine'
 
 const icon = new Icon({
   iconUrl: MapPointer,
@@ -13,8 +14,12 @@ const icon = new Icon({
 const coordinates = {
   tvilla: [27.54760752232738, -99.56012727590763],
 }
+const maps = {
+  base: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+};
 
 const MapView = () => {
+  const [map, setMap] = useState(null);
   const { user } = useSelector((state) => state.auth);
   let center;
   switch (user.company.toLowerCase()) {
@@ -36,17 +41,30 @@ const MapView = () => {
     default:
       break;
   }
+  const [start, setStart] = useState(center)
+  const [end, setEnd] = useState(coordinates.tvilla)
   return (
     <MapContainer
       center={center}
       zoom={14}
       scrollWheelZoom={false}
       style={{ height: "80vh", width: "98vw" }}
+      whenReady={map => setMap(map)}
     >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      <RoutingMachine
+      position={'topleft'}
+      start={start}
+      end={end}
+      color={'#757de8'}
       />
+        <LayersControl position="topright">
+          <LayersControl.BaseLayer checked name="Map">
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url={maps.base}
+            />
+          </LayersControl.BaseLayer>
+        </LayersControl>
       <Marker position={center} icon={icon}>
         <Popup>
         {user.company}

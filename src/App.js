@@ -19,7 +19,6 @@ import Profile from "./pages/ProfilePage/Profile";
 import Drivers from "./pages/Drivers/Drivers";
 import DriverPage from "./pages/DriverPage/DriverPage";
 import BusRoute from "./pages/BusRoute/BusRoute";
-
 function App() {
   return (
     <>

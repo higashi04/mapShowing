@@ -4,7 +4,9 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import MapView from "../../components/MapBio/MapView";
+// import MapView from "../../components/MapBio/MapView";
+import GMap from "../../components/Map/Map";
+
 
 export default function BusRoute() {
   const navigate = useNavigate();
@@ -40,7 +42,8 @@ export default function BusRoute() {
     <div>
       <h1 className="pt-2 ms-3">Ruta de la Unidad {data.unidad}</h1>
       <div className="mt-3" id="map">
-        <MapView />
+        {/* <MapView /> */}
+        <GMap/>
       </div>
     </div>
   );
