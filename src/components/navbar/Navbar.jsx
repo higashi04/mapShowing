@@ -50,11 +50,11 @@ const Navibar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="contacto">Contacto</Nav.Link>
-              <Nav.Link href="about">Quiénes Somos</Nav.Link>
-              <Nav.Link href="vacantes">Vacantes</Nav.Link>
-              <Nav.Link href="servicio">Servicio</Nav.Link>
-              <Nav.Link href="seguridad">Seguridad</Nav.Link>
+              <Nav.Link href="/contacto">Contacto</Nav.Link>
+              <Nav.Link href="/about">Quiénes Somos</Nav.Link>
+              <Nav.Link href="/vacantes">Vacantes</Nav.Link>
+              <Nav.Link href="/servicio">Servicio</Nav.Link>
+              <Nav.Link href="/seguridad">Seguridad</Nav.Link>
               <Nav.Link href="https://www.facebook.com/TranspoVillareal2022">
                 <BsFacebook /> TranspoVillareal2022
               </Nav.Link>
@@ -65,7 +65,7 @@ const Navibar = () => {
             </Nav>
             {user ? (
               <>
-              <Link to='perfil' className="btn btn-dark me-2" reloadDocument> <FaUser/> {user.username}</Link>
+              <Link to='/perfil' className="btn btn-dark me-2" reloadDocument> <FaUser/> {user.username}</Link>
                 <button className="btn btn-dark" onClick={onLogout}>
                   <FaSignOutAlt /> Cerrar Sesión
                 </button>

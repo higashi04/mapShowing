@@ -1,6 +1,12 @@
 import React, { useState, useCallback } from "react";
 import { useSelector } from "react-redux";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  useJsApiLoader,
+  Marker,
+  Polyline,
+} from "@react-google-maps/api";
+
 
 const containerStyle = {
   width: "98vw",
@@ -30,9 +36,59 @@ const GMap = () => {
       center = { lat: 27.54452614482854, lng: -99.56006791236273 };
       break;
   }
-  // const route = [
-  //   {lat: 27.471744756667643, lng: -99.49815581753424}, center
-  // ]
+  const route = [
+    {
+      id: 1,
+      coordinates: { lat: 27.471744756667643, lng: -99.49815581753424 },
+      label: "La casa del programador",
+    },
+    {
+      id: 2,
+      coordinates: { lat: 27.465827083348838, lng: -99.53910737807658 },
+      label: "OES",
+    },
+    {
+      id: 3,
+      coordinates: { lat: 27.443426294145464, lng: -99.50281284374663 },
+      label: "BPI",
+    },
+    {
+      id: 4,
+      coordinates: { lat: 27.54452614482854, lng: -99.56006791236273 },
+      label: "Transporte Villarreal",
+    },
+    {
+      id: 5,
+      coordinates: { lat: 27.471544089968063, lng: -99.63054142406126 },
+      label: "EZO",
+    },
+    {
+      id: 6,
+      coordinates: { lat: 28.67993999605427, lng: -100.58538300228732 },
+      label: "palmitos 821",
+    },
+  ];
+  const path = [
+    { lat: 27.471744756667643, lng: -99.49815581753424 },
+    { lat: 27.465827083348838, lng: -99.53910737807658 },
+    { lat: 27.443426294145464, lng: -99.50281284374663 },
+    { lat: 27.54452614482854, lng: -99.56006791236273 },
+    { lat: 27.471544089968063, lng: -99.63054142406126 },
+  ];
+  const options = {
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35,
+    clickable: false,
+    draggable: false,
+    editable: false,
+    visible: true,
+    radius: 30000,
+
+    zIndex: 1
+  }
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.REACT_APP_MAP_KEY,
@@ -56,13 +112,22 @@ const GMap = () => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={14}
+        zoom={12}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        <Marker position={center}  map={map}/>
-         {/* <Marker position={route[0]} map={map} /> */}
-        {/* {route.map(item => <Marker  position={item} map={map}/>)} */}
+        {route.map((item) => (
+          <Marker
+            key={item.id}
+            position={item.coordinates}
+            map={map}
+            label={item.label}
+          />
+        ))}
+            <Polyline
+      path={path}
+      options={options}
+    />
       </GoogleMap>
     )
   );
